@@ -1,4 +1,4 @@
-#!/Users/ezrqnkemboi/dockz/five/sydroy/docks-app/venv/bin/python
+#!/home/denisovich/Documents/docks-app/venv/bin/python
 
 import sys
 import getopt

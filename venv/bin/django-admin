@@ -1,4 +1,4 @@
-#!/Users/ezrqnkemboi/dockz/five/sydroy/docks-app/venv/bin/python3.7
+#!/home/denisovich/Documents/docks-app/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

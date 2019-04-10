@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'docusion.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'documentediting',
-        'USER': 'ezrqnkemboi',
-        'PASSWORD': 'password',
+        'NAME': 'django_app',
+        'USER': 'apple_django',
+        'PASSWORD': 'apple1990',
         'HOST': '127.0.0.1',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
