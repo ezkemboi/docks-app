@@ -1,4 +1,4 @@
-#!/Users/ezrqnkemboi/dockz/five/sydroy/docks-app/venv/bin/python3.7
+#!/home/hezron/PROJECTS/docks-app/venv/bin/python3
 from django.core import management
 
 if __name__ == "__main__":
