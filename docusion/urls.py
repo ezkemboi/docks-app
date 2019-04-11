@@ -14,8 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from rest_framework_swagger.views import get_swagger_view
+from docusion.template.views import TemplateList
+from rest_framework import routers
+
+schema_view = get_swagger_view(title='Docks Editing App API')
+router = routers.DefaultRouter()
+router.register('template', TemplateList, base_name='template')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/v1/', include(('docusion.template.urls',
+                             'template'), namespace='template')),
+    path('docs', schema_view)
 ]
