@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework_swagger',
+    # 'django-mysql',
+    'rest_framework',
 
     'docusion.template'
 ]
@@ -79,9 +82,9 @@ WSGI_APPLICATION = 'docusion.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django',
-        'USER': 'django',
-        'PASSWORD': 'hheezziiee',
+        'NAME': 'documentediting',
+        'USER': 'root',
+        'PASSWORD': 'ezrqnkemboi',
         'HOST': '127.0.0.1',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
