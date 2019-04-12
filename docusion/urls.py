@@ -20,7 +20,7 @@ from docusion.template.views import TemplateList
 from rest_framework import routers
 
 schema_view = get_swagger_view(title='Docks Editing App API')
-router = routers.DefaultRouter()
+router = routers.DefaultRouter(trailing_slash=False)
 router.register('template', TemplateList, base_name='template')
 
 urlpatterns = [
