@@ -1,5 +1,4 @@
-#!/home/hezron/PROJECTS/docks-app/venv/bin/python3
-
+#!/Users/ezrqnkemboi/dockz/five/sydroy/docks-app/venv/bin/python3.7
 # -*- coding: utf-8 -*-
 import re
 import sys
