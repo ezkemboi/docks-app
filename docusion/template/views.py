@@ -17,6 +17,9 @@ class TemplateList(APIView):
 
     def post(self, request, format=None):
         # Create a template
+        # Will write a kwargs and args function for this validation to avoid long checks
+        if 'name' not in request.data['title'] or 'style' not in request.data['title']:
+            return Response({"message": "Title must contain name and style"}, status=status.HTTP_400_BAD_REQUEST)
         serializer = TemplateSerializers(data=request.data)
         if serializer.is_valid():
             serializer.save()
