@@ -3,18 +3,13 @@ from django_mysql.models import JSONField
 
 # Create your models here.
 
+
 class Template(models.Model):
     slug = models.SlugField(unique=True, primary_key=True, max_length=100)
     created = models.DateTimeField(auto_now_add=True)
     documenttype = models.CharField(max_length=100)
     title = JSONField()
-    introduction = JSONField()
-    abstract = JSONField()
-    literaturereview = JSONField()
-    conclusion = JSONField()
-    references = JSONField()
-    # Add other fields that may be required.
-    otherFields = JSONField()
+    documentfieldsitems = JSONField()
 
     class Meta:
         verbose_name = "Template"
@@ -22,4 +17,3 @@ class Template(models.Model):
 
     def __unicode__(self):
         return self.slug
-

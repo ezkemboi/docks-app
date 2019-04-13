@@ -45,6 +45,16 @@ INSTALLED_APPS = [
     'docusion.template'
 ]
 
+# Parser classes to help swagger documentation default to JSONparser only
+REST_FRAMEWORK = {
+    # Parser classes priority wise
+    'DEFAULT_PARSER_CLASSES': [
+        'rest_framework.parsers.FormParser',
+        'rest_framework.parsers.MultiPartParser',
+        'rest_framework.parsers.JSONParser',
+    ],
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -82,11 +92,12 @@ WSGI_APPLICATION = 'docusion.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'documentediting',
-        'USER': 'root',
-        'PASSWORD': 'ezrqnkemboi',
-        'HOST': '127.0.0.1',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'NAME': os.getenv('NAME'),
+        'USER': os.getenv('USER'),
+        'PASSWORD': os.getenv('PASSWORD'),
+        # Or an IP Address that your DB is hosted on
+        'HOST': os.getenv('HOST'),
+        'PORT': os.getenv('PORT'),
     }
 }
 
