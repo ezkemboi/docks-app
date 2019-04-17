@@ -7,15 +7,20 @@ from rest_framework import status
 from io import BytesIO
 from pdfdocument.document import PDFDocument
 
-def convert_to_pdf(title, abstract, conclusion, references):
+def convert_to_pdf(docs):
     f = BytesIO()
     pdf = PDFDocument(f)
     pdf.init_report()
-    pdf.h1(title)
-    pdf.h3(abstract)
-    pdf.h3(conclusion)
-    pdf.h3(references)
-    pdf.p('Creating PDFs made easy.')
+    pdf.h1(docs["title"])
+    pdf.p(docs["title"]["name"])
+    pdf.h3(docs["abstract"])
+    pdf.p(docs["abstract"]["name"])
+    pdf.h3(docs["literaturereview"])
+    pdf.p(docs["literaturereview"]["name"])
+    pdf.h3(docs["conclusion"])
+    pdf.p(docs["conclusion"]["name"])
+    pdf.h3(docs["references"])
+    pdf.p(docs["references"]["name"])
     pdf.generate()
     return f.getvalue()
 
