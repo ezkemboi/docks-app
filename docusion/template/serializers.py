@@ -10,9 +10,9 @@ class TemplateSerializers(serializers.ModelSerializer):
         }
     )
     introduction = serializers.JSONField(
-        required=False,
+        required=True,
         error_messages={
-            'required': "Introduction should be a valid json of name and style"
+            'required': "Introduction required and it is json of name and style"
         }
     )
     abstract = serializers.JSONField(
