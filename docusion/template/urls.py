@@ -3,7 +3,8 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from docusion.template import views
 
 urlpatterns = [
-    path('template', views.TemplateList.as_view()),
+    path('templates', views.TemplateList.as_view()),
+    path('template/<slug:slug>', views.TemplateSingle.as_view()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

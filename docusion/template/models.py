@@ -13,6 +13,8 @@ class Template(models.Model):
     literaturereview = JSONField()
     conclusion = JSONField()
     references = JSONField()
+    # Add other fields that may be required.
+    otherFields = JSONField()
 
     class Meta:
         verbose_name = "Template"
